@@ -1,4 +1,17 @@
 {
-    "instagram": "https://www.instagram.com/royoplaysmusic/",
-    "soundcloud": "https://soundcloud.com/user-888086568"
+    "instagram": {
+        "url": "https://www.instagram.com/royoplaysmusic/",
+        "icon": "assets/instagram-logo-white.png",
+        "alt": "Instagram"
+    },
+    "soundcloud": {
+        "url": "https://soundcloud.com/user-888086568",
+        "icon": "assets/soundcloud-logo-white.png",
+        "alt": "SoundCloud"
+    },
+    "github": {
+        "url": "https://github.com/your-repo-link",
+        "icon": "assets/github-logo-white.png",
+        "alt": "GitHub"
+    }
 }

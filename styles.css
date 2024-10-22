@@ -6,15 +6,11 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: black;
-    overflow: hidden;
-}
-
-body {
     color: white;
     font-family: 'Inconsolata', monospace;
+    flex-direction: column; /* Stack everything vertically */
 }
 
-/* Ensure the container also takes up the full viewport */
 .container {
     text-align: center;
     display: flex;
@@ -45,4 +41,70 @@ body {
 
 .social-icon:hover {
     transform: scale(1.2);
+}
+
+/* Coming Soon Styles */
+.coming-soon-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.coming-soon {
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Email styling */
+.email-container {
+    margin-top: 20px;
+}
+
+.email {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/* Style the email link to be white and remove default link styling */
+.email a {
+    color: #fff;  /* Set the email link color to white */
+    text-decoration: none;  /* Remove underline */
+}
+
+.email a:hover {
+    text-decoration: underline;  /* Optional underline on hover */
+    color: #fff;  /* Keep the email link white on hover */
+}
+
+/* GNV Entertainment Logo */
+.gnv-logo-container {
+    margin-top: 40px;
+    position: absolute;
+    bottom: 20px; /* Stick it to the bottom */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gnv-logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+}
+
+/* Fade-in animation for text */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

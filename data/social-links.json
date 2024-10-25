@@ -1,13 +1,13 @@
 {
-    "instagram": {
-        "url": "https://www.instagram.com/royoplaysmusic/",
-        "icon": "assets/instagram-logo-white.png",
-        "alt": "Instagram"
-    },
     "soundcloud": {
         "url": "https://soundcloud.com/user-888086568",
         "icon": "assets/soundcloud-logo-white.png",
         "alt": "SoundCloud"
+    },
+    "instagram": {
+        "url": "https://www.instagram.com/royoplaysmusic/",
+        "icon": "assets/instagram-logo-white.png",
+        "alt": "Instagram"
     },
     "github": {
         "url": "https://github.com/jisaiaha/royoplaysmusic",

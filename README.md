@@ -28,11 +28,11 @@ To get the website running locally:
 - **styles.css** - Contains styling for the site.
 - **social-links.json** - Holds social media links for Instagram, SoundCloud, and GitHub.
 
-## Technologies Used
+## Tech Stack
 
-- **HTML & CSS** - For page structure and styling.
-- **Bootstrap** - For responsive design elements.
-- **JavaScript** - For future dynamic functionality.
+- **Frontend**: HTML, CSS (minimalist, no-frills design), JS
+- **Hosting**: AWS EC2 instance
+- **DNS**: Managed via IONOS, pointed to AWS Elastic IP
 
 ## Future Plans
 

@@ -1,45 +1,70 @@
-# Royo Plays Music - Portfolio Website
+# Getting Started with Create React App
 
-Welcome to the GitHub repository for **Royo Plays Music**, a personal portfolio website showcasing my work as a DJ and karaoke host. This website serves as an online presence where users can learn more about my events, connect via social media, and check out my recent projects.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features
+## Available Scripts
 
-- **Landing Page:** Simple and dramatic, with minimal elements for a focused aesthetic. Includes links to social media platforms like Instagram, SoundCloud, and GitHub.
-- **Portfolio Links:** Quick access to Instagram for event photos and SoundCloud for music samples.
-- **Contact and Social Links:** Social media logos with links for easy connection.
+In the project directory, you can run:
 
-## Getting Started
+### `npm start`
 
-To get the website running locally:
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/jisaiaha/royoplaysmusic.git
-   ```
-2. **Navigate to the directory**
-   ```bash
-   cd royoplaysmusic
-   ```
-3. **Open the index.html to preview the landing page.**
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## File Structure
+### `npm test`
 
-- **index.html** - The main HTML file for the landing page.
-- **styles.css** - Contains styling for the site.
-- **social-links.json** - Holds social media links for Instagram, SoundCloud, and GitHub.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Tech Stack
+### `npm run build`
 
-- **Frontend**: HTML, CSS (minimalist, no-frills design), JS
-- **Hosting**: AWS EC2 instance
-- **DNS**: Managed via IONOS, pointed to AWS Elastic IP
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Future Plans
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-In the future, I plan to:
-- Expand the site to include more dynamic content.
-- Host additional event details and media samples.
-- Add a blog for updates and music insights.
-- **Develop an invoicing platform** to streamline payments and track finances. This platform will allow:
-  - Creation of both **hour-based** and **gig-based** invoices.
-  - Tracking of **balances owed by venues** or **clients** who request events.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

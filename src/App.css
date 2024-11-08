@@ -260,6 +260,12 @@ html, body {
     background-color: #0056b3;
 }
 
+/* Placeholder styling for select dropdown */
+.select-placeholder option[value=""][disabled] {
+    display: none; /* Hide the placeholder option from the dropdown list */
+}
+
+
 /* Responsive Design */
 @media (min-width: 768px) {
     .hours-tracking-form {

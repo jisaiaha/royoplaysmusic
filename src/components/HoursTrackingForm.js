@@ -79,8 +79,9 @@ function HoursTrackingForm() {
                             }
                         }}
                         required
+                        className="select-placeholder"
                     >
-                        <option value="">Select a Venue</option>
+                        <option value="" disabled>Select a Venue</option> {/* Placeholder option */}
                         {venues.map((venue) => (
                             <option key={venue.id} value={venue.name}>
                                 {venue.name}

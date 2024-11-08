@@ -1,5 +1,5 @@
-// src/HoursTrackingForm.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import AddVenueModal from './AddVenueModal';
 
 function HoursTrackingForm() {
     const [location, setLocation] = useState('');
@@ -7,12 +7,44 @@ function HoursTrackingForm() {
     const [date, setDate] = useState('');
     const [startTime, setStartTime] = useState('');
     const [endTime, setEndTime] = useState('');
+    const [venues, setVenues] = useState([]);
+    const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+    const [newVenueName, setNewVenueName] = useState(''); // State for the new venue name
 
-    // Handler for form submission
+    // Fetch venues from the API when the component mounts
+    useEffect(() => {
+        fetchVenues();
+    }, []);
+
+    const fetchVenues = () => {
+        fetch('http://localhost:5000/api/venues')
+            .then(response => response.json())
+            .then(data => setVenues(data))
+            .catch(error => console.error('Error fetching venues:', error));
+    };
+
+    // Handle the submission of a new venue
+    const handleAddVenue = () => {
+        fetch('http://localhost:5000/api/venues', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name: newVenueName }),
+        })
+            .then(response => response.json())
+            .then(data => {
+                setVenues([...venues, data.venue]); // Add the new venue to the list
+                setLocation(data.venue.name); // Set the new venue as selected
+                setNewVenueName(''); // Clear the input field
+                setIsModalOpen(false); // Close the modal
+            })
+            .catch(error => console.error('Error adding new venue:', error));
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        // Form data to be submitted
         const formData = {
             location,
             jobDescription,
@@ -37,13 +69,27 @@ function HoursTrackingForm() {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Location:</label>
-                    <input
-                        type="text"
+                    <select
                         value={location}
-                        onChange={(e) => setLocation(e.target.value)}
+                        onChange={(e) => {
+                            if (e.target.value === 'add-new') {
+                                setIsModalOpen(true); // Open the modal to add a new venue
+                            } else {
+                                setLocation(e.target.value);
+                            }
+                        }}
                         required
-                    />
+                    >
+                        <option value="">Select a Venue</option>
+                        {venues.map((venue) => (
+                            <option key={venue.id} value={venue.name}>
+                                {venue.name}
+                            </option>
+                        ))}
+                        <option value="add-new">+ Add New Venue</option> {/* Option to open the modal */}
+                    </select>
                 </div>
+
                 <div>
                     <label>Job Description:</label>
                     <input
@@ -82,6 +128,15 @@ function HoursTrackingForm() {
                 </div>
                 <button type="submit">Submit</button>
             </form>
+
+            {/* AddVenueModal component */}
+            <AddVenueModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                onSubmit={handleAddVenue}
+                newVenueName={newVenueName}
+                setNewVenueName={setNewVenueName}
+            />
         </div>
     );
 }

@@ -44,7 +44,7 @@ function HoursTrackingForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
+    
         const formData = {
             location,
             jobDescription,
@@ -52,16 +52,38 @@ function HoursTrackingForm() {
             startTime,
             endTime,
         };
-
-        console.log('Form Data:', formData);
-
-        // Reset form fields after submission
-        setLocation('');
-        setJobDescription('');
-        setDate('');
-        setStartTime('');
-        setEndTime('');
-    };
+    
+        // Make a POST request to submit the hours data
+        fetch('http://localhost:5000/api/hours', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Failed to submit hours tracking data');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            console.log('Submission successful:', data.message);
+            // Display success message to the user (optional)
+            alert('Hours tracked successfully!');
+    
+            // Reset form fields after successful submission
+            setLocation('');
+            setJobDescription('');
+            setDate('');
+            setStartTime('');
+            setEndTime('');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Failed to submit hours tracking data. Please try again.');
+        });
+    };    
 
     return (
         <div className="hours-tracking-form">

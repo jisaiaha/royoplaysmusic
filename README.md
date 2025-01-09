@@ -26,16 +26,28 @@ To get the website running locally, follow these steps:
      ```bash
      npm install
      ```
-   - **Backend (Flask)**: 
-     ```bash
-     pip install -r requirements.txt
-     ```
+   - **Backend (Flask)**: The requirements will automatically be installed into a virtual environment by running venv_setup.py script in the backend directory. The script should also tell you the command to execute to activate the virtual python environment.
+ 
 4. **Run the project**:
-   - **Frontend**: Start the React development server.
+   - **Frontend**: Start the React development server. This command should be executed in the root directory.
      ```bash
      npm start
      ```
-   - **Backend**: Start the Flask server.
+   - **Backend**: First, ensure that the virtual environment (located in backend) is activated. 
+   
+   For Windows environments, use the .bat file to activate the environment
+
+   ```
+   venv\Scripts\activate
+   ```
+
+   For Linux / Git Bash environments, use the following command to activate the environment.
+
+   ```bash
+   source venv/Scripts/activate
+   ```
+
+   After activating the virtual environment, you may start the Flask server. 
      ```bash
      python app.py
      ```

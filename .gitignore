@@ -25,3 +25,10 @@ yarn-error.log*
 # python ignores
 /backend/venv
 /backend/.env
+/backend/__pycache__
+
+# frontend ignores
+/frontend/node_modules
+
+# docker ignores
+.env

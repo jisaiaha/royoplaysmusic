@@ -21,12 +21,14 @@ To get the website running locally, follow these steps:
    ```bash
    cd royoplaysmusic
    ```
-3. **Install dependencies** for the React and Flask components:
-   - **Frontend (React)**:
+3. **Initialization** for the React and Flask components as well as the database elements:
+   - **React**:
      ```bash
      npm install
      ```
-   - **Backend (Flask)**: The requirements will automatically be installed into a virtual environment by running venv_setup.py script in the backend directory. The script should also tell you the command to execute to activate the virtual python environment.
+   - **Flask**: The requirements will automatically be installed into a virtual environment by running venv_setup.py script in the backend directory. The script should also tell you the command to execute to activate the virtual python environment.
+
+   - **Database**: 
  
 4. **Run the project**:
    - **Frontend**: Start the React development server. This command should be executed in the root directory.
